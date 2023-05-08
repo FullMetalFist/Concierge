@@ -12,7 +12,7 @@ public func configure(_ app: Application) async throws {
     )
     app.middleware.use(fileMiddleware)
     
-    app.databases.use(.postgres(hostname: "localhost", username: "postgres", password: "", database: "conciergedb"), as: .psql)
+    app.databases.use(.postgres(hostname: "localhost", username: "postgres", password: "postgres", database: "conciergedb"), as: .psql)
 
     app.migrations.add(CreateConcierge())
     
